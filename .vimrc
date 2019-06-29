@@ -45,5 +45,7 @@ Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-surround'
+Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install -all'}
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
