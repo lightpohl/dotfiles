@@ -1,13 +1,22 @@
-set nocompatible
 syntax on
+
+set nocompatible
+
+set exrc
+set secure
+
 set number
 set ruler
 
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
+set smarttab
+
 set backspace=indent,eol,start
+
+set ignorecase
+set smartcase
 
 let g:ale_linters_explicit = 1
 let g:ale_fix_on_save = 1
@@ -33,5 +42,8 @@ Plug 'mxw/vim-jsx'
 Plug 'elzr/vim-json'
 Plug 'leafgarland/typescript-vim'
 Plug 'w0rp/ale'
+Plug 'airblade/vim-gitgutter'
+Plug 'itchyny/lightline.vim'
+Plug 'tpope/vim-surround'
 call plug#end()
 
