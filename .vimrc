@@ -49,3 +49,6 @@ Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install -all'}
 Plug 'junegunn/fzf.vim'
 call plug#end()
 
+noremap ,o :NERDTreeToggle<CR>
+noremap ,p :FZF<CR>
+
