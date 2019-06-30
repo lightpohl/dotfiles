@@ -1,17 +1,17 @@
 syntax on
 
-set nocompatible
-
 set exrc
 set secure
+
+set belloff=all
 
 set number
 set ruler
 
-set tabstop=2
+set tabstop=8
+set softtabstop=2
 set shiftwidth=2
 set expandtab
-set smarttab
 
 set backspace=indent,eol,start
 
