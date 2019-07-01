@@ -7,6 +7,7 @@ set belloff=all
 
 set number
 set ruler
+set laststatus=2
 
 set tabstop=8
 set softtabstop=2
