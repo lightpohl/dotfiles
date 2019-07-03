@@ -57,6 +57,7 @@ Plug 'ajh17/VimCompletesMe'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 nnoremap ,o :NERDTreeToggle<CR>
