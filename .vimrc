@@ -56,6 +56,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'ajh17/VimCompletesMe'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 call plug#end()
 
 nnoremap ,o :NERDTreeToggle<CR>
