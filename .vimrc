@@ -37,10 +37,14 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'leafgarland/typescript-vim'
 Plug 'mxw/vim-jsx'
+Plug 'maxmellon/vim-jsx-pretty'
 call plug#end()
 
 nnoremap ,o :NERDTreeToggle<CR>
 nnoremap ,p :FZF<CR>
 
 command! -nargs=0 prettier :CocCommand prettier.formatFile
+
+autocmd BufRead,BufNewFile *.tsx set filetype=typescript.tsx
+autocmd BufRead,BufNewFile *.jsx set filetype=javascript.jsx
 
