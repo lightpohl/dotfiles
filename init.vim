@@ -51,7 +51,7 @@ call plug#end()
 
 nnoremap ,o :NERDTreeToggle<CR>
 nnoremap ,p :FZF<CR>
-nnoremap ,f :Prettier
+nnoremap ,f :Prettier<CR>
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
