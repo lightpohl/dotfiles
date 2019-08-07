@@ -21,6 +21,8 @@ set smartcase
 
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
+let g:delimitMate_expand_cr = 2
+
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'Xuyuanp/nerdtree-git-plugin'
