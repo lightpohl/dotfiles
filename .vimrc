@@ -49,7 +49,7 @@ call plug#end()
 nnoremap ,o :NERDTreeToggle<CR>
 nnoremap ,p :FZF<CR>
 
-command! -nargs=0 prettier :CocCommand prettier.formatFile
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 autocmd BufRead,BufNewFile *.tsx set filetype=typescript.tsx
 autocmd BufRead,BufNewFile *.jsx set filetype=javascript.jsx
