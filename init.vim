@@ -23,7 +23,12 @@ let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 let g:delimitMate_expand_cr = 2
 
+let g:lightline = {
+  \ 'colorscheme': 'dracula',
+  \ }
+
 call plug#begin('~/.local/share/nvim/plugged')
+Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'itchyny/lightline.vim'
@@ -44,6 +49,8 @@ call plug#end()
 " - coc-git
 " - coc-eslint
 " - coc-prettier
+
+colorscheme dracula
 
 nnoremap ,o :NERDTreeToggle<CR>
 nnoremap ,p :FZF<CR>
