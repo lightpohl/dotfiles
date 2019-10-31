@@ -27,6 +27,16 @@ let g:lightline = {
   \ 'colorscheme': 'dracula',
   \ }
 
+let g:coc_global_extensions = [
+  \ 'coc-json',
+  \ 'coc-tsserver',
+  \ 'coc-html',
+  \ 'coc-css',
+  \ 'coc-git',
+  \ 'coc-eslint',
+  \ 'coc-prettier'
+  \ ]
+
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
@@ -39,22 +49,15 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'Raimondi/delimitMate'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'sheerun/vim-polyglot'
 call plug#end()
-
-" coc extension:
-" - coc-json
-" - coc-tsserver
-" - coc-html
-" - coc-css
-" - coc-git
-" - coc-eslint
-" - coc-prettier
 
 colorscheme dracula
 
 nnoremap ,o :NERDTreeToggle<CR>
 nnoremap ,p :FZF<CR>
 nnoremap ,f :Prettier<CR>
+nnoremap ,w <C-W>W
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
