@@ -22,6 +22,9 @@ set smartcase
 
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
+let g:closetag_filenames = '*.html,*.js,*.ts,*.jsx,*.tsx'
+let g:closetag_xhtml_filenames = '*.js,*.ts,*.jsx,*.tsx'
+
 let g:delimitMate_expand_cr = 2
 
 let g:lightline = {
@@ -48,6 +51,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'alvan/vim-closetag'
 Plug 'Raimondi/delimitMate'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
