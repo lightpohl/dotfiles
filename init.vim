@@ -22,6 +22,13 @@ set smartcase
 
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
+let g:side_search_prg = 'ag --word-regexp'
+  \. " --ignore='*.js.map'"
+  \. " --heading --stats -B 1 -A 4"
+
+let g:side_search_splitter = 'vnew'
+let g:side_search_split_pct = 0.4
+
 let g:closetag_filenames = '*.html,*.js,*.ts,*.jsx,*.tsx'
 let g:closetag_xhtml_filenames = '*.js,*.ts,*.jsx,*.tsx'
 
@@ -48,6 +55,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install -all'}
 Plug 'junegunn/fzf.vim'
+Plug 'ddrscott/vim-side-search',
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -63,8 +71,10 @@ nnoremap ,o :NERDTreeToggle<CR>
 nnoremap ,p :FZF<CR>
 nnoremap ,f :Prettier<CR>
 nnoremap ,w <C-W>W
+nnoremap <Leader>ss :SideSearch <C-R><C-W><CR> | wincmd p
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
+command! -complete=file -nargs=+ SS execute 'SideSearch <args>'
 
 autocmd BufRead,BufNewFile *.tsx set filetype=typescript.tsx
 autocmd BufRead,BufNewFile *.jsx set filetype=javascript.jsx
