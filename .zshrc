@@ -1,5 +1,12 @@
-export TODOTXT_DEFAULT_ACTION=ls
-alias t='todo.sh -d ~/.todo.cfg'
+GITHUB_TOKEN="add token here"
+alias sudo="sudo "
+alias nvim="~/bin/nvim.appimage"
 
 ZSH_THEME="avit"
 
+plugins=(
+  docker
+  git
+  npm
+  nvm
+ )  
