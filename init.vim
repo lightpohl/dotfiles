@@ -73,7 +73,7 @@ nnoremap ,o :NERDTreeToggle<CR>
 nnoremap ,p :FZF<CR>
 nnoremap ,f :Prettier<CR>
 nnoremap ,w <C-W>W
-nnoremap <Leader>ss :SideSearch <C-R><C-W><CR> | wincmd p
+nnoremap ,ss :SideSearch <C-R><C-W><CR> | wincmd p
 
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
