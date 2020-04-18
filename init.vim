@@ -25,6 +25,8 @@ set nobackup
 set nowritebackup
 set shortmess+=c
 
+set mouse=a
+
 " Add status line support, for integration with other plugin, checkout `:h coc-status`
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
@@ -73,11 +75,18 @@ call plug#end()
 
 colorscheme dracula
 
+" Mappings for plugins
 nnoremap ,o :NERDTreeToggle<CR>
 nnoremap ,p :FZF<CR>
 nnoremap ,f :Prettier<CR>
-nnoremap ,w <C-W>W
 nnoremap ,ss :SideSearch <C-R><C-W><CR> | wincmd p
+
+" Mappings for split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
 
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
