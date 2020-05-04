@@ -33,9 +33,10 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
-let g:side_search_prg = 'ag --word-regexp'
-  \. " --ignore='*.js.map'"
+let g:side_search_prg = 'ag'
+  \. " --smart-case"
   \. " --heading --stats -B 1 -A 4"
+
 
 let g:side_search_splitter = 'vnew'
 let g:side_search_split_pct = 0.4
