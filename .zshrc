@@ -1,4 +1,6 @@
 GITHUB_TOKEN="add token here"
+
+alias ls="ls -A1"
 alias sudo="sudo "
 alias nvim="~/bin/nvim.appimage"
 
