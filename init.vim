@@ -1,7 +1,5 @@
 syntax on
 
-set exrc
-set secure
 set belloff=all
 set number
 set ruler
@@ -28,10 +26,9 @@ set termguicolors
 " Add status line support, for integration with other plugin, checkout `:h coc-status`
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
-
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
-let g:side_search_prg = 'ag'
+let g:side_search_prg = "ag"
   \. " --smart-case"
   \. " --heading --stats -B 1 -A 4"
 
@@ -57,7 +54,7 @@ let g:coc_global_extensions = [
   \ ]
 
 call plug#begin('~/.local/share/nvim/plugged')
-Plug 'dracula/vim', {'as': 'dracula'}
+Plug 'dracula/vim'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'itchyny/lightline.vim'
@@ -138,4 +135,3 @@ command! -complete=file -nargs=+ SS execute 'SideSearch <args>'
 
 autocmd BufRead,BufNewFile *.tsx set filetype=typescript.tsx
 autocmd BufRead,BufNewFile *.jsx set filetype=javascript.jsx
-
