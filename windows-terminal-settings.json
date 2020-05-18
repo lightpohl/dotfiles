@@ -26,7 +26,9 @@
   "profiles": {
     "defaults": {
       // Put settings here that you want to apply to all profiles.
-      "colorScheme" : "Dracula"
+      "fontFace": "Fira Code",
+      "fontSize": 11,
+      "colorScheme": "Night Owl"
     },
     "list": [
       {
@@ -62,27 +64,48 @@
   // To learn more about color schemes, visit https://aka.ms/terminal-color-schemes
   "schemes": [
     {
-        "name" : "Dracula",
-        "background" : "#272935",
-        "black" : "#21222C",
-        "blue" : "#BD93F9",
-        "cyan" : "#8BE9FD",
-        "foreground" : "#F8F8F2",
-        "green" : "#50FA7B",
-        "purple" : "#FF79C6",
-        "red" : "#FF5555",
-        "white" : "#F8F8F2",
-        "yellow" : "#FFB86C",
-        "brightBlack" : "#6272A4",
-        "brightBlue" : "#D6ACFF",
-        "brightCyan" : "#A4FFFF",
-        "brightGreen" : "#69FF94",
-        "brightPurple" : "#FF92DF",
-        "brightRed" : "#FF6E6E",
-        "brightWhite" : "#F8F8F2",
-        "brightYellow" : "#FFFFA5"
-    }],
-
+      "name": "Dracula",
+      "background": "#272935",
+      "black": "#21222C",
+      "blue": "#BD93F9",
+      "cyan": "#8BE9FD",
+      "foreground": "#F8F8F2",
+      "green": "#50FA7B",
+      "purple": "#FF79C6",
+      "red": "#FF5555",
+      "white": "#F8F8F2",
+      "yellow": "#FFB86C",
+      "brightBlack": "#6272A4",
+      "brightBlue": "#D6ACFF",
+      "brightCyan": "#A4FFFF",
+      "brightGreen": "#69FF94",
+      "brightPurple": "#FF92DF",
+      "brightRed": "#FF6E6E",
+      "brightWhite": "#F8F8F2",
+      "brightYellow": "#FFFFA5"
+    },
+    {
+      "name": "Night Owl",
+      "background": "#011627",
+      "black": "#011627",
+      "blue": "#82AAFF",
+      "brightBlack": "#575656",
+      "brightBlue": "#82AAFF",
+      "brightCyan": "#7FDBCA",
+      "brightGreen": "#22DA6E",
+      "brightPurple": "#C792EA",
+      "brightRed": "#EF5350",
+      "brightWhite": "#FFFFFF",
+      "brightYellow": "#FFEB95",
+      "cyan": "#21C7A8",
+      "foreground": "#D6DEEB",
+      "green": "#22DA6E",
+      "purple": "#C792EA",
+      "red": "#EF5350",
+      "white": "#FFFFFF",
+      "yellow": "#ADDB67"
+    }
+  ],
 
   // Add custom keybindings to this array.
   // To unbind a key combination from your defaults.json, set the command to "unbound".
