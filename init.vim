@@ -2,9 +2,7 @@ syntax on
 
 set exrc
 set secure
-
 set belloff=all
-
 set number
 set ruler
 set laststatus=2
@@ -24,8 +22,8 @@ set hidden
 set nobackup
 set nowritebackup
 set shortmess+=c
-
 set mouse=a
+set termguicolors
 
 " Add status line support, for integration with other plugin, checkout `:h coc-status`
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
