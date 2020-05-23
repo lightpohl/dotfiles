@@ -17,11 +17,17 @@ set backspace=indent,eol,start
 set ignorecase
 set smartcase
 set hidden
+set noswapfile
 set nobackup
 set nowritebackup
+set undodir=~/.config/nvim/undodir
+set undofile
+set incsearch
 set shortmess+=c
 set mouse=a
 set termguicolors
+
+let mapleader = " "
 
 " Add status line support, for integration with other plugin, checkout `:h coc-status`
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
