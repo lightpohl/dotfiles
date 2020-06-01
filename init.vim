@@ -92,27 +92,27 @@ colorscheme dracula
 " Mappings for plugins
 nnoremap <leader>o :NERDTreeToggle<CR>
 nnoremap <leader>p :FZF<CR>
-nnoremap <leader>f :Prettier<CR>:w<CR>
+nnoremap <leader>f :Prettier<CR>
 nnoremap <leader>ss :SideSearch <C-R><C-W><CR> | wincmd p
 
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gc :Gcommit<CR>
 
 " Mappings for split navigation
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+nnoremap <leader>j <C-W>j
+nnoremap <leader>k <C-W>k
+nnoremap <leader>l <C-W>l
+nnoremap <leader>h <C-W>h
 
 " Use `[g` and `]g` to navigate diagnostics
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nmap <leader>[g <Plug>(coc-diagnostic-prev)
+nmap <leader>]g <Plug>(coc-diagnostic-next)
 
 " Remap keys for Coc gotos
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+nmap <leader>gd <Plug>(coc-definition)
+nmap <leader>gy <Plug>(coc-type-definition)
+nmap <leader>gi <Plug>(coc-implementation)
+nmap <leader>gr <Plug>(coc-references)
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 command! -complete=file -nargs=+ SS execute 'SideSearch <args>'
