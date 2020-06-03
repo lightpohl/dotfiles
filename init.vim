@@ -89,26 +89,26 @@ call plug#end()
 
 colorscheme dracula
 
-" Mappings for plugins
 nnoremap <leader>o :NERDTreeToggle<CR>
 nnoremap <leader>p :FZF<CR>
-nnoremap <leader>f :Prettier<CR>
 nnoremap <leader>ss :SideSearch <C-R><C-W><CR> | wincmd p
 
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gc :Gcommit<CR>
 
-" Mappings for split navigation
 nnoremap <leader>j <C-W>j
 nnoremap <leader>k <C-W>k
 nnoremap <leader>l <C-W>l
 nnoremap <leader>h <C-W>h
 
-" Use `[g` and `]g` to navigate diagnostics
 nmap <leader>[g <Plug>(coc-diagnostic-prev)
 nmap <leader>]g <Plug>(coc-diagnostic-next)
 
-" Remap keys for Coc gotos
+vmap <leader>f <Plug>(coc-format-selected)
+nmap <leader>f <Plug>(coc-format-selected)
+
+nmap <leader>qf <Plug>(coc-fix-current)
+
 nmap <leader>gd <Plug>(coc-definition)
 nmap <leader>gy <Plug>(coc-type-definition)
 nmap <leader>gi <Plug>(coc-implementation)
