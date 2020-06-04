@@ -27,7 +27,7 @@ set shortmess+=c
 set mouse=a
 set termguicolors
 
-let mapleader = ","
+map <Space> <Leader>
 
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
@@ -96,10 +96,10 @@ nnoremap <leader>ss :SideSearch <C-R><C-W><CR> | wincmd p
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gc :Gcommit<CR>
 
-nnoremap <leader>j <C-W>j
-nnoremap <leader>k <C-W>k
-nnoremap <leader>l <C-W>l
-nnoremap <leader>h <C-W>h
+nnoremap <C-j> <C-W>j
+nnoremap <C-k> <C-W>k
+nnoremap <C-l> <C-W>l
+nnoremap <C-h> <C-W>h
 
 nmap <leader>[g <Plug>(coc-diagnostic-prev)
 nmap <leader>]g <Plug>(coc-diagnostic-next)
