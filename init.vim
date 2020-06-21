@@ -34,9 +34,12 @@ let g:side_search_prg = "ag"
   \. " --smart-case"
   \. " --heading --stats -C 2 --group"
 
-
 let g:side_search_splitter = 'vnew'
 let g:side_search_split_pct = 0.3
+
+let g:dev_db = 'postgresql://postgres:postgres@localhost:2345/postgres'
+let g:test_db = 'postgresql://postgres:postgres@0.0.0.0:8899/postgres'
+let g:current_db = g:dev_db
 
 function! CocCurrentFunction()
       return get(b:, 'coc_current_function', '')
@@ -84,6 +87,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-repeat'
+    Plug 'tpope/vim-dadbod'
     Plug 'airblade/vim-gitgutter'
     Plug 'editorconfig/editorconfig-vim'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -92,11 +96,15 @@ call plug#end()
 colorscheme dracula
 
 nnoremap <leader>o :NERDTreeToggle<CR>
-nnoremap <leader>p :FZF<CR>
+nnoremap <leader>p :Files<CR>
 nnoremap <leader>ss :SideSearch <C-R><C-W>CR>< | wincmd p
 nnoremap <leader>f :Prettier<CR>
+
 nnoremap <leader>gs :G<CR>
 nnoremap <leader>gc :Gcommit<CR>
+
+vnoremap <Leader>pg   :DB g:current_db<CR>gv
+nnoremap <Leader>pg   :DB g:current_db 
 
 nnoremap <C-j> <C-W>j
 nnoremap <C-k> <C-W>k
