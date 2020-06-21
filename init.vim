@@ -85,6 +85,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-commentary'
+    Plug 'tpope/vim-abolish'
     Plug 'tpope/vim-repeat'
     Plug 'tpope/vim-dadbod'
     Plug 'airblade/vim-gitgutter'
