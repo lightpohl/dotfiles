@@ -1,7 +1,7 @@
 syntax on
 
 set belloff=all
-set number
+set number relativenumber
 set ruler
 set laststatus=2
 set nowrap
@@ -39,67 +39,64 @@ let g:side_search_splitter = 'vnew'
 let g:side_search_split_pct = 0.3
 
 function! CocCurrentFunction()
-    return get(b:, 'coc_current_function', '')
+      return get(b:, 'coc_current_function', '')
 endfunction
 
 let g:lightline = {
-  \ 'colorscheme': 'dracula',
-  \ 'active': {
-  \   'left': [ [ 'mode', 'paste' ],
-  \             ['fugitive', 'cocstatus', 'currentfunction', 'readonly', 'filename', 'modified' ] ]
-  \ },
-  \ 'component_function': {
-  \   'fugitive': 'FugitiveStatusline',
-  \   'cocstatus': 'coc#status',
-  \   'currentfunction': 'CocCurrentFunction'
-  \ },
+      \ 'colorscheme': 'dracula',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             ['fugitive', 'cocstatus', 'currentfunction', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'fugitive': 'FugitiveStatusline',
+      \   'cocstatus': 'coc#status',
+      \   'currentfunction': 'CocCurrentFunction'
+      \ },
 \ }
 
 let g:coc_global_extensions = [
-  \ 'coc-snippets',
-  \ 'coc-pairs',
-  \ 'coc-json',
-  \ 'coc-tsserver',
-  \ 'coc-html',
-  \ 'coc-css',
-  \ 'coc-yaml',
-  \ 'coc-git',
-  \ 'coc-eslint',
-  \ 'coc-prettier'
-\ ]
+      \ 'coc-snippets',
+      \ 'coc-pairs',
+      \ 'coc-json',
+      \ 'coc-tsserver',
+      \ 'coc-html',
+      \ 'coc-css',
+      \ 'coc-yaml',
+      \ 'coc-git',
+      \ 'coc-eslint',
+      \ 'coc-prettier'
+\ ]"
 
 call plug#begin('~/.local/share/nvim/plugged')
-Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
-Plug 'maxmellon/vim-jsx-pretty'
-Plug 'dracula/vim'
-Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'preservim/nerdcommenter'
-Plug 'itchyny/lightline.vim'
-Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install -all'}
-Plug 'junegunn/fzf.vim'
-Plug 'ddrscott/vim-side-search'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-commentary'
-Plug 'airblade/vim-gitgutter'
-Plug 'mattn/emmet-vim'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'pangloss/vim-javascript'
+    Plug 'leafgarland/typescript-vim'
+    Plug 'maxmellon/vim-jsx-pretty'
+    Plug 'dracula/vim'
+    Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
+    Plug 'Xuyuanp/nerdtree-git-plugin'
+    Plug 'preservim/nerdcommenter'
+    Plug 'itchyny/lightline.vim'
+    Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install -all'}
+    Plug 'junegunn/fzf.vim'
+    Plug 'ddrscott/vim-side-search'
+    Plug 'tpope/vim-fugitive'
+    Plug 'tpope/vim-surround'
+    Plug 'tpope/vim-commentary'
+    Plug 'tpope/vim-repeat'
+    Plug 'airblade/vim-gitgutter'
+    Plug 'editorconfig/editorconfig-vim'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 colorscheme dracula
 
 nnoremap <leader>o :NERDTreeToggle<CR>
-nnoremap <leader>h :NERDTreeFind<CR>
 nnoremap <leader>p :FZF<CR>
-nnoremap <leader>ss :SideSearch <C-R><C-W><CR> | wincmd p
-
-nnoremap <leader>gs :Gstatus<CR>
-nnoremap <leader>gc :Gcommit<CR>
-
+nnoremap <leader>ss :SideSearch <C-R><C-W>CR>< | wincmd p
 nnoremap <leader>f :Prettier<CR>
+nnoremap <leader>gs :G<CR>
+nnoremap <leader>gc :Gcommit<CR>
 
 nnoremap <C-j> <C-W>j
 nnoremap <C-k> <C-W>k
