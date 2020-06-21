@@ -6,8 +6,7 @@ set ruler
 set laststatus=2
 set nowrap
 set encoding=utf-8
-set tabstop=8
-set softtabstop=2
+set tabstop=2
 set shiftwidth=2
 set expandtab
 set cmdheight=2
@@ -103,8 +102,10 @@ nnoremap <leader>f :Prettier<CR>
 nnoremap <leader>gs :G<CR>
 nnoremap <leader>gc :Gcommit<CR>
 
-vnoremap <Leader>pg   :DB g:current_db<CR>gv
-nnoremap <Leader>pg   :DB g:current_db 
+vnoremap <leader>db :DB g:current_db<CR>gv
+nnoremap <leader>db :DB g:current_db 
+
+vnoremap <leader>y "+y
 
 nnoremap <C-j> <C-W>j
 nnoremap <C-k> <C-W>k
