@@ -24,6 +24,7 @@ set incsearch
 set shortmess+=c
 set mouse=a
 set termguicolors
+set grepprg=ag\ --nogroup\ --nocolor
 
 let mapleader = ","
 
