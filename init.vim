@@ -71,12 +71,6 @@ let g:coc_global_extensions = [
       \ 'coc-prettier'
 \ ]"
 
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
 call plug#begin('~/.local/share/nvim/plugged')
     Plug 'pangloss/vim-javascript'
     Plug 'leafgarland/typescript-vim'
