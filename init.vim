@@ -59,7 +59,6 @@ let g:lightline = {
 \ }
 
 let g:coc_global_extensions = [
-      \ 'coc-snippets',
       \ 'coc-pairs',
       \ 'coc-json',
       \ 'coc-tsserver',
@@ -77,12 +76,11 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'maxmellon/vim-jsx-pretty'
     Plug 'dracula/vim'
     Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
-    Plug 'Xuyuanp/nerdtree-git-plugin'
     Plug 'preservim/nerdcommenter'
     Plug 'itchyny/lightline.vim'
     Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install -all'}
     Plug 'junegunn/fzf.vim'
-    Plug 'ddrscott/vim-side-search'
+    Plug 'yegappan/mru'
     Plug 'psliwka/vim-smoothie'
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-surround'
@@ -99,7 +97,7 @@ colorscheme dracula
 
 nnoremap <leader>o :NERDTreeToggle<CR>
 nnoremap <leader>p :Files<CR>
-nnoremap <leader>ss :SideSearch <C-R><C-W>CR>< | wincmd p
+nnoremap <leader>r :MRU<CR>
 nnoremap <leader>f :Prettier<CR>
 
 nnoremap <leader>gs :G<CR>
