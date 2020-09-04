@@ -1,8 +1,0 @@
-# Set default audio devices
-set-default-sink 'alsa_output.usb-AudioQuest_AudioQuest_DragonFly_Black_v1.5_AQDFBL0100123228-00.analog-stereo'
-set-default-source 'alsa_input.usb-Blue_Microphones_Yeti_Stereo_Microphone_REV8-00.analog-stereo'
-
-# Disable switching to hot-plugged devices
-#.ifexists module-switch-on-connect.so
-#load-module module-switch-on-connect
-#.endif
