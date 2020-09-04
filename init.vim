@@ -74,6 +74,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'pangloss/vim-javascript'
     Plug 'leafgarland/typescript-vim'
     Plug 'maxmellon/vim-jsx-pretty'
+    Plug 'jparise/vim-graphql'
     Plug 'dracula/vim'
     Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
     Plug 'preservim/nerdcommenter'
