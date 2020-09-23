@@ -49,12 +49,10 @@ let g:lightline = {
       \ 'colorscheme': 'dracula',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             ['fugitive', 'cocstatus', 'currentfunction', 'readonly', 'filename', 'modified' ] ]
+      \             ['gitbranch', 'readonly', 'filename', 'modified' ] ]
       \ },
       \ 'component_function': {
-      \   'fugitive': 'FugitiveStatusline',
-      \   'cocstatus': 'coc#status',
-      \   'currentfunction': 'CocCurrentFunction'
+      \   'gitbranch': 'FugitiveHead',
       \ },
 \ }
 
@@ -124,8 +122,11 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+nmap <leader>gd :CocList diagnostics<CR>
+
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 command! -complete=file -nargs=+ SS execute 'SideSearch <args>'
 
 autocmd BufRead,BufNewFile *.tsx set filetype=typescript.tsx
 autocmd BufRead,BufNewFile *.jsx set filetype=javascript.jsx
+autocmd BufRead,BufNewFile *.graphql set filetype=graphql
