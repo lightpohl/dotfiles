@@ -30,20 +30,11 @@ let mapleader = ","
 
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
-let g:side_search_prg = "ag"
-  \. " --smart-case"
-  \. " --heading --stats -C 2 --group"
-
-let g:side_search_splitter = 'vnew'
-let g:side_search_split_pct = 0.3
+let g:NERDTreeWinSize = 60
 
 let g:dev_db = 'postgresql://postgres:postgres@localhost:2345/postgres'
 let g:test_db = 'postgresql://postgres:postgres@0.0.0.0:8899/postgres'
 let g:current_db = g:dev_db
-
-function! CocCurrentFunction()
-      return get(b:, 'coc_current_function', '')
-endfunction
 
 let g:lightline = {
       \ 'colorscheme': 'dracula',
