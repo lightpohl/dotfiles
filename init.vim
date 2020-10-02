@@ -19,18 +19,20 @@ set noswapfile
 set nobackup
 set nowritebackup
 set undodir=~/.config/nvim/undodir
+" set undodir=~/AppData/Local/nvim/undodir
 set undofile
 set incsearch
 set shortmess+=c
 set mouse=a
 set termguicolors
-set grepprg=ag\ --nogroup\ --nocolor
+set grepprg=rg\ --vimgrep
 
 let mapleader = ","
 
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+let $FZF_DEFAULT_COMMAND = 'rg --files --no-ignore-vcs --hidden'
+let $BAT_THEME = 'Dracula'
 
-let g:NERDTreeWinSize = 60
+let g:NERDTreeWinSize = 40
 
 let g:dev_db = 'postgresql://postgres:postgres@localhost:2345/postgres'
 let g:test_db = 'postgresql://postgres:postgres@0.0.0.0:8899/postgres'
