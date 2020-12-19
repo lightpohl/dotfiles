@@ -1,6 +1,3 @@
-export GITHUB_TOKEN="add token here"
-export GIANTBOMB_TOKEN="add token here"
-
 alias sudo="sudo "
 alias ls="ls -A1 -G"
 
