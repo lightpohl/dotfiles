@@ -5,7 +5,6 @@ ZSH_THEME="avit"
 ZSH_TMUX_AUTOSTART=false
 
 plugins=(
-  docker
   git
   npm
   nvm
