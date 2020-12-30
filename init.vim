@@ -89,9 +89,6 @@ nnoremap <leader>f :Prettier<CR>
 nnoremap <leader>gs :G<CR>
 nnoremap <leader>gc :Gcommit<CR>
 
-vnoremap <leader>db :DB g:current_db<CR>gv
-nnoremap <leader>db :DB g:current_db 
-
 vnoremap <leader>y "+y
 
 nnoremap <C-j> <C-W>j
