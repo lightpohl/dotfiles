@@ -19,7 +19,6 @@ set noswapfile
 set nobackup
 set nowritebackup
 set undodir=~/.config/nvim/undodir
-" set undodir=~/AppData/Local/nvim/undodir
 set undofile
 set incsearch
 set shortmess+=c
