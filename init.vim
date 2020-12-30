@@ -34,10 +34,6 @@ let $BAT_THEME = 'Dracula'
 
 let g:NERDTreeWinSize = 40
 
-let g:dev_db = 'postgresql://postgres:postgres@localhost:2345/postgres'
-let g:test_db = 'postgresql://postgres:postgres@0.0.0.0:8899/postgres'
-let g:current_db = g:dev_db
-
 let g:lightline = {
       \ 'colorscheme': 'dracula',
       \ 'active': {
@@ -79,10 +75,8 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-abolish'
     Plug 'tpope/vim-repeat'
-    Plug 'tpope/vim-dadbod'
     Plug 'airblade/vim-gitgutter'
     Plug 'editorconfig/editorconfig-vim'
-    Plug 'christoomey/vim-tmux-navigator'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
@@ -119,7 +113,6 @@ nmap <silent> gr <Plug>(coc-references)
 nmap <leader>gd :CocList diagnostics<CR>
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
-command! -complete=file -nargs=+ SS execute 'SideSearch <args>'
 
 autocmd BufRead,BufNewFile *.tsx set filetype=typescript.tsx
 autocmd BufRead,BufNewFile *.jsx set filetype=javascript.jsx
