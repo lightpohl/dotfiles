@@ -2,6 +2,7 @@
 " - Install vim-plug: https://github.com/junegunn/vim-plug
 " - Install ripgrep: https://github.com/BurntSushi/ripgrep
 " - Create directory for undodir 
+" - Use a Nerd font for vim-devicons
 
 " Subselection of settings pulled from the coc.nvim suggested config.
 " https://github.com/neoclide/coc.nvim
@@ -74,6 +75,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'dracula/vim'
     Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
     Plug 'xuyuanp/nerdtree-git-plugin'
+    Plug 'ryanoasis/vim-devicons'
     Plug 'preservim/nerdcommenter'
     Plug 'itchyny/lightline.vim'
     Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install -all'}
@@ -248,3 +250,4 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
