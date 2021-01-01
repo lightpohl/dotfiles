@@ -86,7 +86,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'maxmellon/vim-jsx-pretty'
     Plug 'jparise/vim-graphql'
     Plug 'dracula/vim'
-    Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
+    Plug 'scrooloose/nerdtree'
     Plug 'xuyuanp/nerdtree-git-plugin'
     Plug 'ryanoasis/vim-devicons'
     Plug 'preservim/nerdcommenter'
@@ -130,6 +130,15 @@ autocmd BufRead,BufNewFile *.tsx set filetype=typescript.tsx
 autocmd BufRead,BufNewFile *.jsx set filetype=javascript.jsx
 autocmd BufRead,BufNewFile *.graphql set filetype=graphqlp
 autocmd BufRead,BufNewFile *.ejs set filetype=html
+
+" Start NERDTree when Vim is started without file arguments.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+
+" Exit Vim if NERDTree is the only window left.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
+    \ quit | endif
+
 autocmd BufEnter * call SyncNERDTree()
 
 
