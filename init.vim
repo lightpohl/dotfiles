@@ -1,3 +1,9 @@
+" Setup:
+" - Install vim-plug
+" - Install ripgrep
+" - Create directory for undodir 
+"
+
 syntax on
 
 set belloff=all
