@@ -43,6 +43,19 @@ let $BAT_THEME = 'Dracula'
 
 let g:NERDTreeWinSize = 40
 
+function! IsNERDTreeOpen()
+  return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
+endfunction
+
+" Call NERDTreeFind iff NERDTree is active, current window contains a modifiable
+" file, and we're not in vimdiff
+function! SyncNERDTree()
+  if &modifiable && IsNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
+    NERDTreeFind
+    wincmd p
+  endif
+endfunction
+
 let g:lightline = {
       \ 'colorscheme': 'dracula',
       \ 'active': {
@@ -117,6 +130,7 @@ autocmd BufRead,BufNewFile *.tsx set filetype=typescript.tsx
 autocmd BufRead,BufNewFile *.jsx set filetype=javascript.jsx
 autocmd BufRead,BufNewFile *.graphql set filetype=graphqlp
 autocmd BufRead,BufNewFile *.ejs set filetype=html
+autocmd BufEnter * call SyncNERDTree()
 
 
 " Use tab for trigger completion with characters ahead and navigate.
