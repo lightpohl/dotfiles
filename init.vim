@@ -63,6 +63,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'jparise/vim-graphql'
     Plug 'dracula/vim'
     Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
+    Plug 'xuyuanp/nerdtree-git-plugin'
     Plug 'preservim/nerdcommenter'
     Plug 'itchyny/lightline.vim'
     Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install -all'}
@@ -113,3 +114,5 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 autocmd BufRead,BufNewFile *.tsx set filetype=typescript.tsx
 autocmd BufRead,BufNewFile *.jsx set filetype=javascript.jsx
 autocmd BufRead,BufNewFile *.graphql set filetype=graphql
+autocmd BufRead,BufNewFile *.ejs set filetype=html
+
