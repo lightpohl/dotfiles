@@ -43,19 +43,6 @@ let $BAT_THEME = 'Dracula'
 
 let g:NERDTreeWinSize = 40
 
-function! IsNERDTreeOpen()
-  return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
-endfunction
-
-" Call NERDTreeFind if NERDTree is active, current window contains a modifiable
-" file, and we're not in vimdiff
-function! SyncNERDTree()
-  if &modifiable && IsNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
-    NERDTreeFind
-    wincmd p
-  endif
-endfunction
-
 let g:lightline = {
       \ 'colorscheme': 'dracula',
       \ 'active': {
@@ -129,16 +116,9 @@ autocmd BufRead,BufNewFile *.jsx set filetype=javascript.jsx
 autocmd BufRead,BufNewFile *.graphql set filetype=graphqlp
 autocmd BufRead,BufNewFile *.ejs set filetype=html
 
-" Start NERDTree when Vim is started without file arguments.
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | wincmd p | endif
-
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
     \ quit | endif
-
-autocmd BufEnter * call SyncNERDTree()
-
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
