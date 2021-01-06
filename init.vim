@@ -88,6 +88,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'tpope/vim-abolish'
     Plug 'tpope/vim-repeat'
     Plug 'airblade/vim-gitgutter'
+    Plug 'christoomey/vim-tmux-navigator'
     Plug 'editorconfig/editorconfig-vim'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
