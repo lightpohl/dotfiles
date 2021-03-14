@@ -8,9 +8,6 @@ ZSH_THEME="avit"
 ZSH_TMUX_AUTOSTART=true
 
 plugins=(
-  git
-  npm
-  nvm
   tmux
  )  
 
