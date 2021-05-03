@@ -9,6 +9,7 @@ ZSH_TMUX_AUTOSTART=true
 
 plugins=(
   tmux
+  nvm
  )  
 
  export RIPGREP_CONFIG_PATH="~/.ripgreprc"
