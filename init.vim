@@ -1,10 +1,13 @@
 " Setup:
 " - Download Hyper: https://hyper.is/
-" - Install tpm: https://github.com/tmux-plugins/tpm
+" - Install neovim
+" - Install neovimp providers
 " - Install vim-plug: https://github.com/junegunn/vim-plug
 " - Install ripgrep: https://github.com/BurntSushi/ripgrep
 " - Install diff-so-fancy: https://www.npmjs.com/package/diff-so-fancy
-" - Create directory for undodir 
+" - Create directory for undodir
+" - Add .ripgreprc
+" - Add .tmux.conf
 
 " Subselection of settings pulled from the coc.nvim suggested config.
 " https://github.com/neoclide/coc.nvim
@@ -42,6 +45,8 @@ let mapleader = ","
 
 let $FZF_DEFAULT_COMMAND = 'rg --files --no-ignore-vcs --hidden'
 let $BAT_THEME = 'Dracula'
+
+let g:dracula_colorterm = 0
 
 let g:NERDTreeWinSize = 40
 
@@ -251,4 +256,3 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
-
