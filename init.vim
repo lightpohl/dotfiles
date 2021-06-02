@@ -1,8 +1,9 @@
 " Setup:
+" - Download Hyper: https://hyper.is/
 " - Install vim-plug: https://github.com/junegunn/vim-plug
 " - Install ripgrep: https://github.com/BurntSushi/ripgrep
+" - Install diff-so-fancy: https://www.npmjs.com/package/diff-so-fancy
 " - Create directory for undodir 
-" - Use a Nerd font for vim-devicons
 
 " Subselection of settings pulled from the coc.nvim suggested config.
 " https://github.com/neoclide/coc.nvim
@@ -75,13 +76,10 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'dracula/vim'
     Plug 'scrooloose/nerdtree'
     Plug 'xuyuanp/nerdtree-git-plugin'
-    Plug 'ryanoasis/vim-devicons'
-    Plug 'preservim/nerdcommenter'
     Plug 'itchyny/lightline.vim'
     Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install -all'}
     Plug 'junegunn/fzf.vim'
     Plug 'yegappan/mru'
-    Plug 'psliwka/vim-smoothie'
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-commentary'
