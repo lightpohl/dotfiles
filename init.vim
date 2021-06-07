@@ -1,7 +1,7 @@
 " Setup:
 " - Download Hyper: https://hyper.is/
 " - Install neovim
-" - Install neovimp providers
+" - Install neovim providers
 " - Install vim-plug: https://github.com/junegunn/vim-plug
 " - Install ripgrep: https://github.com/BurntSushi/ripgrep
 " - Install diff-so-fancy: https://www.npmjs.com/package/diff-so-fancy
