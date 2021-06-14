@@ -3,7 +3,7 @@ alias ls="ls -A1 -G"
 alias vim="nvim"
 
 # Install dracula theme: https://draculatheme.com/zsh
-ZSH_THEME="dracula/dracua"
+ZSH_THEME="dracula/dracula"
 ZSH_TMUX_AUTOSTART=true
 
 plugins=(
