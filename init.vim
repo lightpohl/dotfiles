@@ -3,6 +3,7 @@
 " - Install neovim
 " - Install neovim providers
 " - Install vim-plug: https://github.com/junegunn/vim-plug
+" - Install tpm: https://github.com/tmux-plugins/tpm
 " - Install ripgrep: https://github.com/BurntSushi/ripgrep
 " - Install diff-so-fancy: https://www.npmjs.com/package/diff-so-fancy
 " - Create directory for undodir
