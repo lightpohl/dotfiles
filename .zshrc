@@ -13,4 +13,5 @@ plugins=(
  )  
 
  export RIPGREP_CONFIG_PATH="~/.ripgreprc"
-
+ 
+ export PATH="$HOME/.npm-global/bin:$PATH"
