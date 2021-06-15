@@ -6,6 +6,7 @@
 " - Install vim-plug: https://github.com/junegunn/vim-plug
 " - Install tpm: https://github.com/tmux-plugins/tpm
 " - Install ripgrep: https://github.com/BurntSushi/ripgrep
+" - Create directory for npm global installs: https://stackoverflow.com/a/55274930
 " - Install diff-so-fancy: https://www.npmjs.com/package/diff-so-fancy
 " - Create directory for undodir
 " - Add .ripgreprc
