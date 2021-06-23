@@ -1,6 +1,6 @@
 " Setup:
-" - Download Hyper: https://hyper.is/
-" - Install Dracula theme for Hyper: https://draculatheme.com/hyper
+" - Download iTerm2: https://iterm2.com/
+" - Install Dracula theme for iTerm2: https://draculatheme.com/iterm
 " - Install neovim
 " - Install neovim providers
 " - Install vim-plug: https://github.com/junegunn/vim-plug
