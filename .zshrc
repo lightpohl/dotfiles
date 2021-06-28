@@ -10,6 +10,7 @@ plugins=(
   git
   tmux
   nvm
+  fzf
  )  
 
  export RIPGREP_CONFIG_PATH="~/.ripgreprc"
