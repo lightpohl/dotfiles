@@ -6,9 +6,6 @@
 " - Install VS Code neovim extension: https://github.com/asvetliakov/vscode-neovim
 " - Create directory for undodir 
 
-" Subselection of settings pulled from the coc.nvim suggested config.
-" https://github.com/neoclide/coc.nvim
-
 let mapleader = ","
 
 if !exists('g:vscode')
