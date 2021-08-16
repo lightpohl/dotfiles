@@ -1,5 +1,6 @@
 " Setup:
 " - Download iTerm2: https://iterm2.com/
+" - Install Neovim: https://github.com/neovim/neovim
 " - Install vim-plug: https://github.com/junegunn/vim-plug
 " - Install ripgrep: https://github.com/BurntSushi/ripgrep
 " - Install diff-so-fancy: https://www.npmjs.com/package/diff-so-fancy
