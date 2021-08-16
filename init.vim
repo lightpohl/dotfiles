@@ -1,9 +1,8 @@
 " Setup:
-" - Download Hyper: https://hyper.is/
+" - Download iTerm2: https://iterm2.com/
 " - Install vim-plug: https://github.com/junegunn/vim-plug
 " - Install ripgrep: https://github.com/BurntSushi/ripgrep
 " - Install diff-so-fancy: https://www.npmjs.com/package/diff-so-fancy
-" - Install VS Code neovim extension: https://github.com/asvetliakov/vscode-neovim
 " - Create directory for undodir 
 
 let mapleader = ","
@@ -56,6 +55,12 @@ if !exists('g:vscode')
         \   'gitbranch': 'FugitiveHead',
         \ },
   \ }
+  
+  let g:coc_global_extensions = [
+    \ 'coc-tsserver',
+    \ 'coc-eslint',
+    \ 'coc-prettier'
+  \ ]"
 
   call plug#begin('~/.local/share/nvim/plugged')
       Plug 'dracula/vim'
@@ -73,6 +78,7 @@ if !exists('g:vscode')
       Plug 'airblade/vim-gitgutter'
       Plug 'christoomey/vim-tmux-navigator'
       Plug 'editorconfig/editorconfig-vim'
+      Plug 'neoclide/coc.nvim', {'branch': 'release'}
   call plug#end()
 
   colorscheme dracula
@@ -86,11 +92,21 @@ if !exists('g:vscode')
   nnoremap <leader>p :Files<CR>
   nnoremap <leader>r :MRU<CR>
 
-  nnoremap <leader>gs :G<CR>
-  nnoremap <leader>gc :Gcommit<CR>
-
   vnoremap <leader>y "+y
 
+  " Remap keys for applying codeAction to the current line.
+  nmap <leader>ac  <Plug>(coc-codeaction)
+  " Apply AutoFix to problem on the current line.
+  nmap <leader>qf  <Plug>(coc-fix-current)
+  
+  nmap <silent> gd <Plug>(coc-definition)
+  nmap <silent> gy <Plug>(coc-type-definition)
+  nmap <silent> gi <Plug>(coc-implementation)
+  nmap <silent> gr <Plug>(coc-references)
+  
+  autocmd BufRead,BufNewFile *.tsx set filetype=typescript.tsx
+  autocmd BufRead,BufNewFile *.jsx set filetype=javascript.jsx
+  autocmd BufRead,BufNewFile *.graphql set filetype=graphqlp
 
   " Exit Vim if NERDTree is the only window left.
   autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
