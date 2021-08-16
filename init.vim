@@ -91,6 +91,7 @@ if !exists('g:vscode')
   nnoremap <leader>o :NERDTreeToggle<CR>
   nnoremap <leader>p :Files<CR>
   nnoremap <leader>r :MRU<CR>
+  nnoremap <leader>f :Prettier<CR>
 
   vnoremap <leader>y "+y
 
