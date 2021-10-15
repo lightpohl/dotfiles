@@ -48,8 +48,6 @@ if !exists('g:vscode')
 
   let g:dracula_colorterm = 0
 
-  let g:NERDTreeWinSize = 40
-
   let g:lightline = {
         \ 'colorscheme': 'dracula',
         \ 'active': {
@@ -60,17 +58,9 @@ if !exists('g:vscode')
         \   'gitbranch': 'FugitiveHead',
         \ },
   \ }
-  
-  let g:coc_global_extensions = [
-    \ 'coc-tsserver',
-    \ 'coc-eslint',
-    \ 'coc-prettier'
-  \ ]"
 
   call plug#begin('~/.local/share/nvim/plugged')
       Plug 'dracula/vim'
-      Plug 'scrooloose/nerdtree'
-      Plug 'xuyuanp/nerdtree-git-plugin'
       Plug 'itchyny/lightline.vim'
       Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install -all'}
       Plug 'junegunn/fzf.vim'
@@ -83,7 +73,6 @@ if !exists('g:vscode')
       Plug 'airblade/vim-gitgutter'
       Plug 'christoomey/vim-tmux-navigator'
       Plug 'editorconfig/editorconfig-vim'
-      Plug 'neoclide/coc.nvim', {'branch': 'release'}
   call plug#end()
 
   colorscheme dracula
@@ -93,30 +82,12 @@ if !exists('g:vscode')
   nnoremap <C-l> <C-W>l
   nnoremap <C-h> <C-W>h
 
-  nnoremap <leader>o :NERDTreeToggle<CR>
-  nnoremap <leader>n :NERDTreeFind<CR>
   nnoremap <leader>p :Files<CR>
   nnoremap <leader>r :MRU<CR>
   nnoremap <leader>f :Prettier<CR>
 
   vnoremap <leader>y "+y
-
-  " Remap keys for applying codeAction to the current line.
-  nmap <leader>ac  <Plug>(coc-codeaction)
-  " Apply AutoFix to problem on the current line.
-  nmap <leader>qf  <Plug>(coc-fix-current)
-  
-  nmap <silent> gd <Plug>(coc-definition)
-  nmap <silent> gy <Plug>(coc-type-definition)
-  nmap <silent> gi <Plug>(coc-implementation)
-  nmap <silent> gr <Plug>(coc-references)
   
   autocmd BufRead,BufNewFile *.tsx set filetype=typescript.tsx
   autocmd BufRead,BufNewFile *.jsx set filetype=javascript.jsx
-  autocmd BufRead,BufNewFile *.graphql set filetype=graphqlp
-
-  " Exit Vim if NERDTree is the only window left.
-  autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
-      \ quit | endif
 endif
-
