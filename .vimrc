@@ -1,6 +1,5 @@
 " Setup:
 " - Download iTerm2: https://iterm2.com/
-" - Install Neovim: https://github.com/neovim/neovim
 " - Create directory for npm global installs: https://stackoverflow.com/a/55274930
 " - Install tpm: https://github.com/tmux-plugins/tpm
 " - Install vim-plug: https://github.com/junegunn/vim-plug
