@@ -32,7 +32,7 @@ if !exists('g:vscode')
   set noswapfile
   set nobackup
   set nowritebackup
-  set undodir=~/.config/nvim/undodir
+  set undodir=~/.undodir
   set undofile
   set incsearch
   set shortmess+=c
@@ -83,7 +83,6 @@ if !exists('g:vscode')
 
   nnoremap <leader>p :Files<CR>
   nnoremap <leader>r :MRU<CR>
-  nnoremap <leader>f :Prettier<CR>
 
   vnoremap <leader>y "+y
   
