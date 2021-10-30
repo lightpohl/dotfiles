@@ -42,6 +42,7 @@ let $FZF_DEFAULT_COMMAND = 'rg --files --no-ignore-vcs --hidden'
 let $BAT_THEME = 'Dracula'
 
 let g:dracula_colorterm = 0
+let g:dracula_italic = 0
 
 let g:lightline = {
   \ 'colorscheme': 'dracula',
@@ -49,6 +50,7 @@ let g:lightline = {
 
 let g:coc_global_extensions = [
   \ 'coc-tsserver',
+  \ 'coc-snippets',
   \ 'coc-json',
   \ 'coc-html',
   \ 'coc-css',
@@ -59,6 +61,10 @@ let g:coc_global_extensions = [
 
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'dracula/vim'
+Plug 'pangloss/vim-javascript'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install -all'}
 Plug 'junegunn/fzf.vim'
@@ -80,8 +86,11 @@ nnoremap <leader>r :MRU<CR>
 
 vnoremap <leader>y "+y
 
-autocmd BufRead,BufNewFile *.tsx set filetype=typescript.tsx
-autocmd BufRead,BufNewFile *.jsx set filetype=javascript.jsx
+autocmd BufRead,BufNewFile *.{ts,tsx} set filetype=typescriptreact
+autocmd BufRead,BufNewFile *.{js,jsx} set filetype=javascriptreact
+
+autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
 " coc.nvim ----------
 
