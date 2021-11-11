@@ -28,7 +28,7 @@ set hidden
 set noswapfile
 set nobackup
 set nowritebackup
-set undodir=~/.undodir
+set undodir=~/.config/nvim/undodir
 set undofile
 set incsearch
 set shortmess+=c
@@ -37,16 +37,12 @@ set mouse=a
 set termguicolors
 set grepprg=rg\ --vimgrep
 
-
 let $FZF_DEFAULT_COMMAND = 'rg --files --no-ignore-vcs --hidden'
 let $BAT_THEME = 'Dracula'
 
 let g:dracula_colorterm = 0
 let g:dracula_italic = 0
-
-let g:lightline = {
-  \ 'colorscheme': 'dracula',
-  \ }
+let g:airline_theme='dracula'
 
 let g:coc_global_extensions = [
   \ 'coc-tsserver',
@@ -65,11 +61,16 @@ Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
-Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install -all'}
 Plug 'junegunn/fzf.vim'
 Plug 'yegappan/mru'
 Plug 'airblade/vim-gitgutter'
+Plug 'vim-airline/vim-airline'
+Plug 'scrooloose/nerdtree'
+Plug 'xuyuanp/nerdtree-git-plugin'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
@@ -83,14 +84,16 @@ nnoremap <C-h> <C-W>h
 
 nnoremap <leader>p :Files<CR>
 nnoremap <leader>r :MRU<CR>
+nnoremap <leader>o :NERDTreeToggle<CR>
 
 vnoremap <leader>y "+y
+
+set statusline^=%{get(g:,'coc_git_status','')}%{get(b:,'coc_git_status','')}%{get(b:,'coc_git_blame','')}
 
 autocmd BufRead,BufNewFile *.{ts,tsx} set filetype=typescriptreact
 autocmd BufRead,BufNewFile *.{js,jsx} set filetype=javascriptreact
 
-autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
-autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+autocmd BufEnter,InsertLeave * :syntax sync fromstart
 
 " coc.nvim ----------
 
