@@ -43,6 +43,7 @@ let $BAT_THEME = 'Dracula'
 let g:dracula_colorterm = 0
 let g:dracula_italic = 0
 let g:airline_theme='dracula'
+let g:NERDTreeWinSize=60
 
 let g:coc_global_extensions = [
   \ 'coc-tsserver',
