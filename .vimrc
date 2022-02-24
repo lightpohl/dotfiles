@@ -60,7 +60,7 @@ let g:coc_global_extensions = [
   \ ]
 
 call plug#begin('~/.local/share/nvim/plugged')
-Plug 'dracula/vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'leafgarland/typescript-vim'
@@ -70,6 +70,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'yegappan/mru'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-fugitive'
