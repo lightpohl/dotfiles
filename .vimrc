@@ -1,4 +1,7 @@
 " Setup:
+" - Install zsh
+" - Install Oh My Zsh: https://ohmyz.sh/#install
+" - Install nvm: https://github.com/nvm-sh/nvm
 " - Create directory for npm global installs: https://stackoverflow.com/a/55274930
 " - Install vim-plug: https://github.com/junegunn/vim-plug
 " - Install ripgrep: https://github.com/BurntSushi/ripgrep
@@ -72,6 +75,7 @@ Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+Plug 'mhinz/vim-startify'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
