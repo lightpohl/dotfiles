@@ -91,6 +91,22 @@ nnoremap <C-h> <C-W>h
 nnoremap <leader>p :Files<CR>
 nnoremap <leader>r :MRU<CR>
 nnoremap <leader>o :NERDTreeToggle<CR>
+nnoremap <leader>b :Buffers<CR>
+
+nnoremap Y y$
+
+nnoremap n nzzzv
+nnoremap N Nzznv
+nnoremap J mzJ`z
+
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+inoremap [ [<c-g>u
+inoremap { {<c-g>u
+inoremap ( (<c-g>u
+
 
 vnoremap <leader>y "+y
 
