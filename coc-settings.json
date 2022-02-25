@@ -13,5 +13,7 @@
   "javascript.suggestionActions.enabled": false,
   "typescript.suggestionActions.enabled": false,
   "eslint.autoFixOnSave": true,
-  "prettier.disableSuccessMessage": true
+  "diagnostic.errorSign": "•",
+  "diagnostic.warningSign": "•",
+  "diagnostic.infoSign": "•"
 }
