@@ -96,7 +96,7 @@ nnoremap <leader>b :Buffers<CR>
 nnoremap Y y$
 
 nnoremap n nzzzv
-nnoremap N Nzznv
+nnoremap N Nzzzv
 nnoremap J mzJ`z
 
 inoremap , ,<c-g>u
