@@ -4,13 +4,11 @@ alias vim="nvim"
 
 ZSH_THEME="avit"
 
-# https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
 # https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
 plugins=(
   git
   nvm
   fzf
-  zsh-autosuggestions
   zsh-syntax-highlighting
  )  
 
