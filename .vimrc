@@ -4,10 +4,11 @@
 " - Install nvm: https://github.com/nvm-sh/nvm
 " - Create directory for npm global installs: https://stackoverflow.com/a/55274930
 " - Install vim-plug: https://github.com/junegunn/vim-plug
-" - Install the_silver_searcher: https://github.com/ggreer/the_silver_searcher
+" - Install ripgrep: https://github.com/BurntSushi/ripgrep
 " - Install diff-so-fancy: https://www.npmjs.com/package/diff-so-fancy
 " - Create directory for undodir
 " - Add .ripgreprc
+" - Add .ignore
 
 let mapleader = ","
 
@@ -39,11 +40,11 @@ set updatetime=300
 set mouse=a
 set termguicolors
 
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
+if executable('rg')
+  let g:ackprg = 'rg --vimgrep'
+  let $FZF_DEFAULT_COMMAND = 'rg --files'
 endif
 
-let $FZF_DEFAULT_COMMAND = 'rg --files --no-ignore-vcs --hidden'
 let $BAT_THEME = 'Dracula'
 
 let g:dracula_colorterm = 0
@@ -68,9 +69,9 @@ Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
-Plug 'mileszs/ack.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'mileszs/ack.vim'
 Plug 'yegappan/mru'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
