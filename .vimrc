@@ -4,7 +4,7 @@
 " - Install nvm: https://github.com/nvm-sh/nvm
 " - Create directory for npm global installs: https://stackoverflow.com/a/55274930
 " - Install vim-plug: https://github.com/junegunn/vim-plug
-" - Install ripgrep: https://github.com/BurntSushi/ripgrep
+" - Install the_silver_searcher: https://github.com/ggreer/the_silver_searcher
 " - Install diff-so-fancy: https://www.npmjs.com/package/diff-so-fancy
 " - Create directory for undodir
 " - Add .ripgreprc
@@ -38,7 +38,10 @@ set shortmess+=c
 set updatetime=300
 set mouse=a
 set termguicolors
-set grepprg=rg\ --vimgrep
+
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 let $FZF_DEFAULT_COMMAND = 'rg --files --no-ignore-vcs --hidden'
 let $BAT_THEME = 'Dracula'
@@ -65,6 +68,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
+Plug 'mileszs/ack.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'yegappan/mru'
