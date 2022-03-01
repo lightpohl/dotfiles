@@ -42,7 +42,7 @@ set termguicolors
 
 if executable('rg')
   let g:ackprg = 'rg --vimgrep'
-  let $FZF_DEFAULT_COMMAND = 'rg --files'
+  let $FZF_DEFAULT_COMMAND = 'rg --files --ignore'
 endif
 
 let $BAT_THEME = 'Dracula'
