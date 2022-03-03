@@ -50,7 +50,6 @@ let $BAT_THEME = 'Dracula'
 let g:dracula_colorterm = 0
 let g:dracula_italic = 0
 let g:airline_theme='dracula'
-let g:NERDTreeWinSize=60
 
 let g:coc_global_extensions = [
   \ 'coc-tsserver',
@@ -76,11 +75,10 @@ Plug 'yegappan/mru'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'scrooloose/nerdtree'
-Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-eunuch'
 Plug 'mhinz/vim-startify'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -95,7 +93,6 @@ nnoremap <C-h> <C-W>h
 
 nnoremap <leader>p :Files<CR>
 nnoremap <leader>r :MRU<CR>
-nnoremap <leader>o :NERDTreeToggle<CR>
 nnoremap <leader>b :Buffers<CR>
 
 nnoremap Y y$
