@@ -10,30 +10,36 @@
 
 let mapleader = ","
 
-syntax on
-
-set belloff=all
-set number relativenumber
-set ruler
-set laststatus=2
-set nowrap
-set encoding=utf-8
-set tabstop=2
-set shiftwidth=2
-set expandtab
-set cmdheight=2
-set signcolumn=number
+set incsearch
 set backspace=indent,eol,start
 set ignorecase
 set smartcase
-set hidden
-set noswapfile
-set nobackup
-set nowritebackup
-set undodir=~/.config/nvim/undodir
-set undofile
-set incsearch
-set shortmess+=c
-set updatetime=300
-set mouse=a
-set termguicolors
+
+if exists('g:vscode')
+else
+  syntax on
+  set belloff=all
+  set number relativenumber
+  set ruler
+  set laststatus=2
+  set nowrap
+  set encoding=utf-8
+  set tabstop=2
+  set shiftwidth=2
+  set expandtab
+  set cmdheight=2
+  set signcolumn=number
+  set hidden
+  set noswapfile
+  set nobackup
+  set nowritebackup
+  set undodir=~/.config/nvim/undodir
+  set undofile
+  set shortmess+=c
+  set updatetime=300
+  set mouse=a
+  set termguicolors
+endif
+
+
+
