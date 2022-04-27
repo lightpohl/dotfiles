@@ -12,7 +12,7 @@
 
 let mapleader = ","
 
-syntax off
+syntax on
 
 set belloff=all
 set number relativenumber
@@ -47,7 +47,6 @@ endif
 
 let g:coc_global_extensions = [
   \ 'coc-tsserver',
-  \ 'coc-snippets',
   \ 'coc-json',
   \ 'coc-html',
   \ 'coc-css',
@@ -57,7 +56,8 @@ let g:coc_global_extensions = [
   \ ]
 
 call plug#begin('~/.local/share/nvim/plugged')
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'kyazdani42/nvim-tree.lua'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
@@ -77,6 +77,7 @@ nnoremap <C-k> <C-W>k
 nnoremap <C-l> <C-W>l
 nnoremap <C-h> <C-W>h
 
+nnoremap <leader>o :NvimTreeToggle<CR>
 nnoremap <leader>p :Files<CR>
 nnoremap <leader>r :MRU<CR>
 nnoremap <leader>b :Buffers<CR>
