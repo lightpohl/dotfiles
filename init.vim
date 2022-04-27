@@ -54,8 +54,11 @@ let g:coc_global_extensions = [
   \ 'coc-eslint',
   \ 'coc-prettier'
   \ ]
+  
+let g:airline_theme='gruvbox'
 
 call plug#begin('~/.local/share/nvim/plugged')
+Plug 'morhetz/gruvbox'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -64,6 +67,7 @@ Plug 'mileszs/ack.vim'
 Plug 'yegappan/mru'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
