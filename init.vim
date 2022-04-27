@@ -77,6 +77,7 @@ nnoremap <C-k> <C-W>k
 nnoremap <C-l> <C-W>l
 nnoremap <C-h> <C-W>h
 
+nnoremap <leader>n :NvimTreeFindFile<CR>
 nnoremap <leader>o :NvimTreeToggle<CR>
 nnoremap <leader>p :Files<CR>
 nnoremap <leader>r :MRU<CR>
