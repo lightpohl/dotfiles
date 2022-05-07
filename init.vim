@@ -55,10 +55,10 @@ let g:coc_global_extensions = [
   \ 'coc-prettier'
   \ ]
   
-let g:airline_theme='gruvbox'
+let g:airline_theme='molokai'
 
 call plug#begin('~/.local/share/nvim/plugged')
-Plug 'morhetz/gruvbox'
+Plug 'tomasr/molokai'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
