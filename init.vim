@@ -41,8 +41,8 @@ set mouse=a
 set termguicolors
 
 if executable('rg')
-  let g:ackprg = 'rg --vimgrep'
-  let $FZF_DEFAULT_COMMAND = 'rg --files --ignore'
+  let g:ackprg = 'rg --vimgrep --no-messages'
+  let $FZF_DEFAULT_COMMAND = 'rg --files --ignore --no-messages'
 endif
 
 let g:coc_global_extensions = [
