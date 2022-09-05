@@ -53,10 +53,10 @@ let g:coc_global_extensions = [
   \ 'coc-prettier'
   \ ]
   
-let g:airline_theme='molokai'
+let g:airline_theme='gruvbox'
 
 call plug#begin('~/.local/share/nvim/plugged')
-Plug 'tomasr/molokai'
+Plug 'morhetz/gruvbox'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -104,6 +104,8 @@ inoremap ( (<c-g>u
 vnoremap <leader>y "+y
 
 set statusline^=%{get(g:,'coc_git_status','')}%{get(b:,'coc_git_status','')}%{get(b:,'coc_git_blame','')}
+
+autocmd vimenter * ++nested colorscheme gruvbox
 
 autocmd BufRead,BufNewFile *.{ts,tsx} set filetype=typescriptreact
 autocmd BufRead,BufNewFile *.{js,jsx} set filetype=javascriptreact
