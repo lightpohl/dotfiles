@@ -43,6 +43,10 @@ if executable('rg')
   let $FZF_DEFAULT_COMMAND = 'rg --files --ignore --no-messages'
 endif
 
+let g:netrw_keepdir = 0
+let g:netrw_banner = 0
+let g:netrw_winsize = 30
+
 let g:coc_global_extensions = [
   \ 'coc-tsserver',
   \ 'coc-json',
@@ -57,8 +61,6 @@ let g:airline_theme='gruvbox'
 
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'morhetz/gruvbox'
-Plug 'kyazdani42/nvim-web-devicons'
-Plug 'kyazdani42/nvim-tree.lua'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
@@ -71,19 +73,20 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'jparise/vim-graphql'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
-
-lua require'nvim-tree'.setup {}
 
 nnoremap <C-j> <C-W>j
 nnoremap <C-k> <C-W>k
 nnoremap <C-l> <C-W>l
 nnoremap <C-h> <C-W>h
 
-nnoremap <leader>n :NvimTreeFindFile<CR>
-nnoremap <leader>o :NvimTreeToggle<CR>
-nnoremap <leader>p :Files<CR>
+nnoremap <leader>o :Lexplore %:p:h<CR>
+nnoremap <leader>p :FZF<CR>
 nnoremap <leader>r :MRU<CR>
 nnoremap <leader>b :Buffers<CR>
 
