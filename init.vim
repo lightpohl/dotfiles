@@ -73,9 +73,9 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'pangloss/vim-javascript'
+Plug 'yuezk/vim-js'
 Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
+Plug 'maxmellon/vim-jsx-pretty'
 Plug 'jparise/vim-graphql'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
@@ -85,7 +85,10 @@ nnoremap <C-k> <C-W>k
 nnoremap <C-l> <C-W>l
 nnoremap <C-h> <C-W>h
 
-nnoremap <leader>o :Lexplore %:p:h<CR>
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+
+nnoremap <leader>o :Explore %:p:h<CR>
 nnoremap <leader>p :FZF<CR>
 nnoremap <leader>r :MRU<CR>
 nnoremap <leader>b :Buffers<CR>
