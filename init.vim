@@ -77,8 +77,20 @@ Plug 'yuezk/vim-js'
 Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'jparise/vim-graphql'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter-context'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
+
+lua << EOF
+  require('nvim-treesitter.configs').setup {
+    ensure_installed = {"css", "graphql", "javascript", "rust", "typescript"}
+  }
+EOF
+
+lua << EOF
+  require('treesitter-context').setup {}
+EOF
 
 nnoremap <C-j> <C-W>j
 nnoremap <C-k> <C-W>k
