@@ -1,0 +1,13 @@
+[
+	{
+	    "keys": ["f12"],
+	    "command": "lsp_symbol_definition",
+	    "context": [
+	        {
+	            "key": "selector",
+	            "operator": "equal",
+	            "operand": "source.ts, source.js, source.tsx, source.jsx"
+	        }
+	    ]
+	}
+]
