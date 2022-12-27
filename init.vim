@@ -3,12 +3,8 @@
 " - Install Oh My Zsh: https://ohmyz.sh/#install
 " - Install nvm: https://github.com/nvm-sh/nvm
 " - Install vim-plug: https://github.com/junegunn/vim-plug
-" - Install ripgrep: https://github.com/BurntSushi/ripgrep
 " - Create directory for undodir
-" - Add .ripgreprc
 " - Add .ignore
-
-let mapleader = ","
 
 syntax on
 
@@ -37,11 +33,6 @@ set mouse=a
 set termguicolors
 set scrolloff=8
 
-if executable('rg')
-  let g:ackprg = 'rg --vimgrep --no-messages'
-  let $FZF_DEFAULT_COMMAND = 'rg --files --ignore --no-messages'
-endif
-
 let g:netrw_banner = 0
 let g:netrw_winsize = 30
 
@@ -61,8 +52,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'mileszs/ack.vim'
-Plug 'yegappan/mru'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -88,6 +77,8 @@ lua << EOF
   require('treesitter-context').setup {}
 EOF
 
+let mapleader = ","
+
 nnoremap <C-j> <C-W>j
 nnoremap <C-k> <C-W>k
 nnoremap <C-l> <C-W>l
@@ -96,13 +87,12 @@ nnoremap <C-h> <C-W>h
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
 
-nnoremap <leader>o :Explore %:p:h<CR>
-nnoremap <leader>p :FZF<CR>
-nnoremap <leader>r :MRU<CR>
 nnoremap <leader>b :Buffers<CR>
-nnoremap <leader>u :UndotreeToggle<CR>
-nnoremap <leader>gs :Git<CR>
+nnoremap <leader>o :Explore %:p:h<CR>
 nnoremap <leader>f :Format<CR>
+nnoremap <leader>p :FZF<CR>
+nnoremap <leader>gs :Git<CR>
+nnoremap <leader>u :UndotreeToggle<CR>
 
 nnoremap Y y$
 
