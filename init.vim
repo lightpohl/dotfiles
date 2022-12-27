@@ -3,7 +3,9 @@
 " - Install Oh My Zsh: https://ohmyz.sh/#install
 " - Install nvm: https://github.com/nvm-sh/nvm
 " - Install vim-plug: https://github.com/junegunn/vim-plug
+" - Install ripgrep: https://github.com/BurntSushi/ripgrep
 " - Create directory for undodir
+" - Add .ripgreprc
 " - Add .ignore
 
 syntax on
@@ -32,6 +34,12 @@ set updatetime=50
 set mouse=a
 set termguicolors
 set scrolloff=8
+
+if executable('rg')
+  set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
+  set grepformat+=%f:%l:%c:%m
+  let $FZF_DEFAULT_COMMAND = 'rg --files --ignore --no-messages'
+endif
 
 let g:netrw_banner = 0
 let g:netrw_winsize = 30
