@@ -17,7 +17,6 @@ set number relativenumber
 set ruler
 set laststatus=2
 set nowrap
-set encoding=utf-8
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -28,8 +27,6 @@ set ignorecase
 set smartcase
 set hidden
 set noswapfile
-set nobackup
-set nowritebackup
 set undodir=~/.config/nvim/undodir
 set undofile
 set incsearch
@@ -71,11 +68,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
+Plug 'mbbill/undotree'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'yuezk/vim-js'
-Plug 'leafgarland/typescript-vim'
-Plug 'maxmellon/vim-jsx-pretty'
-Plug 'jparise/vim-graphql'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-context'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -83,7 +77,8 @@ call plug#end()
 
 lua << EOF
   require('nvim-treesitter.configs').setup {
-    ensure_installed = {"css", "graphql", "javascript", "rust", "typescript"}
+    ensure_installed = {"css", "graphql", "help", "javascript", "rust", "typescript"},
+    highlight = {enable = true, additional_vim_regex_highlighting = false}
   }
 EOF
 
@@ -103,6 +98,8 @@ nnoremap <leader>o :Explore %:p:h<CR>
 nnoremap <leader>p :FZF<CR>
 nnoremap <leader>r :MRU<CR>
 nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>u :UndotreeToggle<CR>
+nnoremap <leader>gs :Git<CR>
 
 nnoremap Y y$
 
