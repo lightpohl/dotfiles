@@ -29,11 +29,13 @@ set hidden
 set noswapfile
 set undodir=~/.config/nvim/undodir
 set undofile
+set nohlsearch
 set incsearch
 set shortmess+=c
-set updatetime=300
+set updatetime=50
 set mouse=a
 set termguicolors
+set scrolloff=8
 
 if executable('rg')
   let g:ackprg = 'rg --vimgrep --no-messages'
