@@ -102,6 +102,7 @@ nnoremap <leader>r :MRU<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>u :UndotreeToggle<CR>
 nnoremap <leader>gs :Git<CR>
+nnoremap <leader>f :Format<CR>
 
 nnoremap Y y$
 
