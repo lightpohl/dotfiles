@@ -46,6 +46,8 @@ let g:netrw_winsize = 30
   
 let g:airline_theme='gruvbox'
 
+let g:neoformat_try_node_exe = 1
+
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -53,6 +55,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'sbdchd/neoformat'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
@@ -113,7 +116,7 @@ nnoremap <C-u> <C-u>zz
 
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>o :Explore %:p:h<CR>
-nnoremap <leader>f :LspZeroFormat<CR>
+nnoremap <leader>f :Neoformat<CR>
 nnoremap <leader>p :FZF<CR>
 nnoremap <leader>gs :Git<CR>
 nnoremap <leader>u :UndotreeToggle<CR>
@@ -135,3 +138,5 @@ inoremap ( (<c-g>u
 vnoremap <leader>y "+y
 
 autocmd vimenter * ++nested colorscheme gruvbox
+
+autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx if &modified | Neoformat | endif
