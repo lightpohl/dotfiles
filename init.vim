@@ -118,7 +118,6 @@ nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>o :Explore %:p:h<CR>
 nnoremap <leader>f :Neoformat<CR>
 nnoremap <leader>p :FZF<CR>
-nnoremap <leader>gs :Git<CR>
 nnoremap <leader>u :UndotreeToggle<CR>
 
 nnoremap Y y$
@@ -139,4 +138,13 @@ vnoremap <leader>y "+y
 
 autocmd vimenter * ++nested colorscheme gruvbox
 
-autocmd BufWritePre *.css,*.js,*.jsx,*.ts,*.tsx if &modified | Neoformat | endif
+function FormatJavaScript()
+  :EslintFixAll
+  :Neoformat
+endfunction
+autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx call FormatJavaScript()
+
+function FormatCSS()
+  :Neoformat
+endfunction
+autocmd BufWritePre *.css call FormatCSS()
