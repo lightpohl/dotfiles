@@ -139,4 +139,4 @@ vnoremap <leader>y "+y
 
 autocmd vimenter * ++nested colorscheme gruvbox
 
-autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx if &modified | Neoformat | endif
+autocmd BufWritePre *.css,*.js,*.jsx,*.ts,*.tsx if &modified | Neoformat | endif
