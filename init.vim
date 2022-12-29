@@ -41,7 +41,6 @@ if executable('rg')
   let $FZF_DEFAULT_COMMAND = 'rg --files --ignore --no-messages'
 endif
 
-let g:netrw_banner = 0
 let g:netrw_winsize = 30
   
 let g:airline_theme='gruvbox'
@@ -60,6 +59,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-vinegar'
 Plug 'mbbill/undotree'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -120,7 +120,6 @@ nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
 
 nnoremap <leader>b :Buffers<CR>
-nnoremap <leader>o :Explore %:p:h<CR>
 nnoremap <leader>f :Neoformat<CR>
 nnoremap <leader>p :FZF<CR>
 nnoremap <leader>u :UndotreeToggle<CR>
