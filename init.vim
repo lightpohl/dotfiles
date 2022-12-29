@@ -64,6 +64,7 @@ Plug 'mbbill/undotree'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-context'
+Plug 'windwp/nvim/autopairs'
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
@@ -90,6 +91,10 @@ lua << EOF
 EOF
 
 lua << EOF
+  require('nvim-autopairs').setup {}
+EOF
+
+lua << EOF
   local lsp = require('lsp-zero')
   lsp.preset('recommended')
   
@@ -104,7 +109,7 @@ lua << EOF
   lsp.setup()
 EOF
 
-let mapleader = ","
+let mapleader = ','
 
 nnoremap <C-j> <C-W>j
 nnoremap <C-k> <C-W>k
@@ -137,6 +142,9 @@ inoremap ( (<c-g>u
 vnoremap <leader>y "+y
 
 autocmd vimenter * ++nested colorscheme gruvbox
+
+autocmd BufNewFile,BufRead *.js,*.jsx set filetype=javascriptreact
+autocmd BufNewFile,BufRead *.ts,*.tsx set filetype=typescriptreact
 
 function FormatJavaScript()
   :EslintFixAll
