@@ -38,7 +38,6 @@ set scrolloff=8
 if executable('rg')
   set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
   set grepformat+=%f:%l:%c:%m
-  let $FZF_DEFAULT_COMMAND = 'rg --files --ignore --no-messages'
 endif
 
 let g:netrw_winsize = 30
@@ -49,8 +48,6 @@ let g:neoformat_try_node_exe = 1
 
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'morhetz/gruvbox'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -61,7 +58,8 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-vinegar'
 Plug 'mbbill/undotree'
-Plug 'editorconfig/editorconfig-vim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-context'
 Plug 'windwp/nvim/autopairs'
@@ -119,10 +117,12 @@ nnoremap <C-h> <C-W>h
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
 
-nnoremap <leader>b :Buffers<CR>
-nnoremap <leader>f :Neoformat<CR>
-nnoremap <leader>p :FZF<CR>
 nnoremap <leader>u :UndotreeToggle<CR>
+
+nnoremap <leader>ff :Telescope find_files<CR>
+nnoremap <leader>fg :Telescope live_grep<CR>
+nnoremap <leader>fb :Telescope buffers<CR>
+nnoremap <leader>fh :Telescope help_tags<CR>
 
 nnoremap Y y$
 
