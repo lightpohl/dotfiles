@@ -146,12 +146,19 @@ autocmd BufNewFile,BufRead *.js,*.jsx set filetype=javascriptreact
 autocmd BufNewFile,BufRead *.ts,*.tsx set filetype=typescriptreact
 
 function FormatJavaScript()
-  :EslintFixAll
-  :Neoformat
+  if exists(':EslitFixAll')
+    :EslintFixAll
+  endif
+  
+  if exists(':Neoformat')
+    :Neoformat
+  endif
 endfunction
 autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx call FormatJavaScript()
 
 function FormatCSS()
-  :Neoformat
+  if exists(':Neoformat')
+    :Neoformat
+  endif
 endfunction
 autocmd BufWritePre *.css call FormatCSS()
