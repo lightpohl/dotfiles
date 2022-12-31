@@ -83,21 +83,9 @@ lua << EOF
     ensure_installed = {"css", "help", "html", "javascript", "typescript"},
     highlight = {enable = true, additional_vim_regex_highlighting = false}
   }
-EOF
-
-lua << EOF
+  
   require('treesitter-context').setup {}
-EOF
-
-lua << EOF
-  require('nvim-autopairs').setup {}
-EOF
-
-lua << EOF
-  require('nvim-ts-autotag').setup {}
-EOF
-
-lua << EOF
+  
   local lsp = require('lsp-zero')
   lsp.preset('recommended')
   
@@ -110,6 +98,9 @@ lua << EOF
   
   lsp.nvim_workspace()
   lsp.setup()
+  
+  require('nvim-autopairs').setup {}
+  require('nvim-ts-autotag').setup {}
 EOF
 
 let mapleader = ','
