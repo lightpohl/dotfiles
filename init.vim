@@ -63,6 +63,7 @@ Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-context'
 Plug 'windwp/nvim/autopairs'
+Plug 'windwp/nvim-ts-autotag'
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
@@ -90,6 +91,10 @@ EOF
 
 lua << EOF
   require('nvim-autopairs').setup {}
+EOF
+
+lua << EOF
+  require('nvim-ts-autotag').setup {}
 EOF
 
 lua << EOF
