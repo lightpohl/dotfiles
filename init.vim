@@ -1,6 +1,7 @@
 " Setup:
 " - Install zsh
 " - Install Oh My Zsh: https://ohmyz.sh/#install
+" - Install exa: https://the.exa.website/
 " - Install nvm: https://github.com/nvm-sh/nvm
 " - Install vim-plug: https://github.com/junegunn/vim-plug
 " - Install fzf: https://github.com/junegunn/fzf
