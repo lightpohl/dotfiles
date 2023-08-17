@@ -4,8 +4,6 @@ plugins=(
   git
   nvm
   fzf
-  # https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
-  zsh-syntax-highlighting 
  )
  
 autoload -Uz vcs_info
@@ -18,7 +16,8 @@ PROMPT="%F{green}%*%f %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f
 $ "
 
 alias sudo="sudo "
-alias ls="ls -A1 -G"
+alias ls="exa --long --no-permissions --no-user"
+alias nvim="echo 'replace me'"
  
  export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
