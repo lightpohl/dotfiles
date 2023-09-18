@@ -13,7 +13,5 @@ Just a place to save various config files.
 - Install Neovim: https://github.com/neovim/neovim/wiki/Installing-Neovim
 - Install vim-plug: https://github.com/junegunn/vim-plug
 - Install fzf: https://github.com/junegunn/fzf
-- Install ripgrep: https://github.com/BurntSushi/ripgrep
 - Create directory for undodir
-- Add `.ripgreprc`
 - Add `.ignore`
