@@ -13,4 +13,7 @@ Just a place to save various config files.
 - Install vim-plug: https://github.com/junegunn/vim-plug
 - Configure Git: https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup
 - Download coding font: https://www.jetbrains.com/lp/mono/
+- Install Dracula theme for terminal: https://draculatheme.com/
 - Add `.ignore`
+- Update `.zshrc`
+- Update `init.vim`
