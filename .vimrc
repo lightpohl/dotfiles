@@ -24,15 +24,6 @@ set updatetime=50
 set mouse=a
 set termguicolors
 set scrolloff=8
-  
-let g:airline_theme='gruvbox'
-
-call plug#begin('~/.local/share/nvim/plugged')
-Plug 'morhetz/gruvbox'
-Plug 'airblade/vim-gitgutter'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-call plug#end()
 
 let mapleader = ','
 
@@ -59,5 +50,4 @@ inoremap { {<c-g>u
 inoremap ( (<c-g>u
 
 vnoremap <leader>y "+y
-
-autocmd vimenter * ++nested colorscheme gruvbox
+            
