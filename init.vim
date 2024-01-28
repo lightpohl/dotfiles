@@ -42,50 +42,12 @@ Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'sbdchd/neoformat'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+Plug 'nvim-telescope/telescope.nvim',
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-context'
 Plug 'windwp/nvim-autopairs'
 Plug 'windwp/nvim-ts-autotag'
-Plug 'neovim/nvim-lspconfig'
-Plug 'williamboman/mason.nvim'
-Plug 'williamboman/mason-lspconfig.nvim'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-path'
-Plug 'saadparwaiz1/cmp_luasnip'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-nvim-lua'
-Plug 'L3MON4D3/LuaSnip'
-Plug 'rafamadriz/friendly-snippets'
-Plug 'VonHeikemen/lsp-zero.nvim'
 call plug#end()
-
-lua << EOF
-  require('nvim-treesitter.configs').setup {
-    ensure_installed = {"c", "lua", "vim", "query", "css", "html", "javascript", "typescript"},
-    highlight = {enable = true, additional_vim_regex_highlighting = false}
-  }
-  
-  require('treesitter-context').setup {}
-  
-  local lsp = require('lsp-zero')
-  lsp.preset('recommended')
-  
-  lsp.ensure_installed({
-    'tsserver',
-    'eslint',
-    'html',
-    'cssls'
-  })
-  
-  lsp.nvim_workspace()
-  lsp.setup()
-  
-  require('nvim-autopairs').setup {}
-  require('nvim-ts-autotag').setup {}
-EOF
 
 let mapleader = ','
 
@@ -149,3 +111,4 @@ function FormatSQL()
   endif
 endfunction
 autocmd BufWritePre *.sql call FormatSQL()
+
