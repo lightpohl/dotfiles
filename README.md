@@ -6,6 +6,7 @@ Just a place to save various config files.
 
 - Install zsh
 - Install Oh My Zsh: https://ohmyz.sh/#install
+- Install Helix: https://docs.helix-editor.com/install.html
 - Install fzf: https://github.com/junegunn/fzf
 - Install exa: https://the.exa.website/
 - Install nvm: https://github.com/nvm-sh/nvm
@@ -14,4 +15,4 @@ Just a place to save various config files.
 - Install Dracula theme for terminal: https://draculatheme.com/
 - Add `.ignore`
 - Update `.zshrc`
-- Update `.vimrc`
+- Update `.config/helix`
