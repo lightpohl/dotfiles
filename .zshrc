@@ -17,6 +17,7 @@ $ "
 
 alias sudo="sudo "
 alias ls="exa --long --no-permissions --no-user"
+alias vim="nvim"
  
  export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
