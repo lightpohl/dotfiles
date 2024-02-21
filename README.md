@@ -14,4 +14,5 @@ Just a place to save various config files.
 - Download coding font: https://www.nerdfonts.com/font-downloads
 - Install Dracula theme for terminal: https://draculatheme.com/
 - Add `.ignore`
+  - `git config --global core.excludesfile ~/.ignore`
 - Update `.zshrc`
