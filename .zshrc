@@ -16,7 +16,6 @@ PROMPT="%F{green}%*%f %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f
 $ "
 
 alias sudo="sudo "
-alias ls="exa --long --no-permissions --no-user"
 alias vim="nvim"
  
  export NVM_DIR="$HOME/.nvm"
