@@ -1,11 +1,3 @@
-ZSH_THEME="avit"
-
-plugins=(
-  git
-  nvm
-  fzf
- )
- 
 autoload -Uz vcs_info
 precmd() { vcs_info }
 
