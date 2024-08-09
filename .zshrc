@@ -1,5 +1,5 @@
 setopt PROMPT_SUBST
-PROMPT="%F{green}%*%f %F{blue}%~%f
+PROMPT="%F{green}%*%f %F{yellow}%~%f
 $ "
  
  export NVM_DIR="$HOME/.nvm"
