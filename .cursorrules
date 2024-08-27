@@ -1,5 +1,6 @@
 prefer arrow functions in JavaScript
 avoid switch statements in JavaScript
 
+prefer types over interfaces in TypeScript
 avoid enums in TypeScript
 avoid namespaces in TypeScript
