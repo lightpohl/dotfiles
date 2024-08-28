@@ -12,7 +12,7 @@ Just a place to save various config files.
 - Configure Git: https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup
 - Download coding font: https://github.com/tonsky/FiraCode
 - Download coding theme: https://marketplace.visualstudio.com/items?itemName=enkia.tokyo-night
-- Download theme icons: https://marketplace.visualstudio.com/items?itemName=BeardedBear.beardedicons
+- Download theme icons: https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons
 - Add `.ignore`
   - `git config --global core.excludesfile ~/.ignore`
 - Update `.zshrc`
