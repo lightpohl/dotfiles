@@ -7,4 +7,4 @@ prefer types over interfaces in TypeScript
 avoid enums in TypeScript
 avoid namespaces in TypeScript
 
-do not import from "react" package unless importing in a named export
+do not import from "react" package unless importing a named export
