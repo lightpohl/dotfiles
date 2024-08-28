@@ -1,6 +1,10 @@
-prefer arrow functions in JavaScript
-avoid switch statements in JavaScript
+prefer named export in JavaScript
+prefer JavaScript arrow functions
+avoid JavaScript switch statements
 
+prefer named exports in TypeScript
 prefer types over interfaces in TypeScript
 avoid enums in TypeScript
 avoid namespaces in TypeScript
+
+do not import from "react" package unless importing in a named export
