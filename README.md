@@ -4,6 +4,8 @@ Just a place to save various config files.
 
 ## New Computer Setup
 
+- Download Kitty: https://sw.kovidgoyal.net/kitty/
+- Download VS Code: https://code.visualstudio.com/
 - Install Homebrew: https://brew.sh/
 - Install neovim: `brew install neovim`
 - Install LazyVim: https://www.lazyvim.org/
