@@ -4,7 +4,7 @@ Just a place to save various config files.
 
 ## New Computer Setup
 
-- Download Kitty: https://iterm2.com/
+- Download terminal: https://iterm2.com/
 - Download VS Code: https://code.visualstudio.com/
 - Install Homebrew: https://brew.sh/
 - Install neovim: `brew install neovim`
@@ -13,8 +13,6 @@ Just a place to save various config files.
 - Install nvm: https://github.com/nvm-sh/nvm
 - Configure Git: https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup
 - Download coding font: https://github.com/tonsky/FiraCode
-- Download coding theme: https://marketplace.visualstudio.com/items?itemName=enkia.tokyo-night
-- Download theme icons: https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons
 - Add `.ignore`
   - `git config --global core.excludesfile ~/.ignore`
 - Update `.zshrc`
