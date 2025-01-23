@@ -9,9 +9,9 @@ set number
 set tabstop=4
 set shiftwidth=4
 set background=dark
-colorscheme retrobox
 
 call plug#begin()
+Plug 'morhetz/gruvbox'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
