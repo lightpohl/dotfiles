@@ -10,3 +10,12 @@ set tabstop=4
 set shiftwidth=4
 set background=dark
 colorscheme retrobox
+
+call plug#begin()
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'mhinz/vim-startify'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+call plug#end()
