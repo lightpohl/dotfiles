@@ -19,6 +19,7 @@ set rnu
 let g:netrw_banner = 0
 
 call plug#begin()
+Plug 'sphamba/smear-cursor.nvim'
 Plug 'morhetz/gruvbox'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
@@ -28,6 +29,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 call plug#end()
 
+lua require('smear_cursor').enabled = true
 colorscheme gruvbox
 
 "Clear searchhighlight on press "enter"
