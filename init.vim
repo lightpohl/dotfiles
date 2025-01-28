@@ -18,31 +18,6 @@ set rnu
 
 let g:netrw_banner = 0
 
-call plug#begin()
-Plug 'sphamba/smear-cursor.nvim'
-Plug 'morhetz/gruvbox'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
-Plug 'mhinz/vim-startify'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-call plug#end()
-
-lua require('smear_cursor').enabled = true
-colorscheme gruvbox
-
-lua << EOF
-require("nvim-treesitter.configs").setup({
-    ensure_installed = {},
-    sync_install = false,
-    auto_install = true,
-    highlight = {
-        enable = true,
-    },
-})
-EOF
-
 "Clear searchhighlight on press "enter"
 nnoremap <silent> <cr> :nohlsearch<cr><cr>
 
