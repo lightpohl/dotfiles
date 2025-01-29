@@ -18,6 +18,17 @@ set rnu
 
 let g:netrw_banner = 0
 
+call plug#begin()
+Plug 'sphamba/smear-cursor.nvim'
+Plug 'morhetz/gruvbox'
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'mhinz/vim-startify'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+call plug#end()
+
 "Clear searchhighlight on press "enter"
 nnoremap <silent> <cr> :nohlsearch<cr><cr>
 
