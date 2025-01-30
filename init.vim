@@ -20,7 +20,6 @@ let g:netrw_banner = 0
 
 call plug#begin()
 Plug 'sphamba/smear-cursor.nvim'
-Plug 'morhetz/gruvbox'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
@@ -29,7 +28,13 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 call plug#end()
 
-"Clear searchhighlight on press "enter"
+" Find files with fzf
+nmap <leader>p :GFiles<CR>
+
+" Find files with fzf
+nmap <leader>b :Buffers<CR>
+
+" Clear searchhighlight on press "enter"
 nnoremap <silent> <cr> :nohlsearch<cr><cr>
 
 " Ctrl + hjkl to move between windows
