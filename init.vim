@@ -1,6 +1,12 @@
 let mapleader=","
 
 syntax on
+filetype plugin on
+
+set path+=**
+set wildmenu
+set wildignore+=**/node_modules/**
+
 set hidden
 set nobackup
 set nowritebackup
@@ -15,8 +21,6 @@ set shiftwidth=4
 set expandtab
 set background=dark
 set rnu
-
-let g:netrw_banner = 0
 
 " Clear searchhighlight on press "enter"
 nnoremap <silent> <cr> :nohlsearch<cr><cr>
