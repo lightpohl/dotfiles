@@ -36,8 +36,11 @@ require("lazy").setup({
     { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
     {
       'nvim-telescope/telescope.nvim', 
-      branch = '0.1.x',
-      dependencies = { 'nvim-lua/plenary.nvim' }
+      -- Remove the 'tag' or 'branch' lines to get the latest fixes
+      dependencies = { 'nvim-lua/plenary.nvim' },
+      config = function()
+        require('telescope').setup({})
+      end
     },
     {
       "nvim-treesitter/nvim-treesitter",
