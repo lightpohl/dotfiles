@@ -25,10 +25,6 @@ local map = vim.keymap.set
 map("n", "<leader>p", "<cmd>Telescope find_files<cr>")
 map("n", "<leader>fg", "<cmd>Telescope live_grep<cr>")
 map("n", "<leader>h", "<cmd>nohlsearch<cr>", { silent = true })
-map("n", "<C-h>", "<C-w>h")
-map("n", "<C-j>", "<C-w>j")
-map("n", "<C-k>", "<C-w>k")
-map("n", "<C-l>", "<C-w>l")
 
 map("n", "[d", vim.diagnostic.goto_prev)
 map("n", "]d", vim.diagnostic.goto_next)
@@ -38,6 +34,7 @@ map("n", "<leader>q", vim.diagnostic.setloclist)
 require("lazy").setup({
   spec = {
     { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+    { "christoomey/vim-tmux-navigator", lazy = false },
     {
       'nvim-lualine/lualine.nvim',
       dependencies = { 'nvim-tree/nvim-web-devicons' },
@@ -95,12 +92,20 @@ require("lazy").setup({
     },
     {
       "neovim/nvim-lspconfig",
-      dependencies = { "williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim" },
+      dependencies = { 
+        "williamboman/mason.nvim", 
+        "williamboman/mason-lspconfig.nvim",
+        "WhoIsSethDaniel/mason-tool-installer.nvim",
+      },
       config = function()
         require("mason").setup()
         require("mason-lspconfig").setup({ 
-          ensure_installed = { "ruff", "pyright", "vtsls", "eslint", "prettierd" } 
+          ensure_installed = { "ruff", "pyright", "vtsls", "eslint" } 
         })
+        require("mason-tool-installer").setup({
+          ensure_installed = { "prettierd" }
+        })
+
         local capabilities = require('cmp_nvim_lsp').default_capabilities()
         vim.api.nvim_create_autocmd('LspAttach', {
           callback = function(args)
@@ -111,6 +116,7 @@ require("lazy").setup({
             map("n", "<leader>ca", vim.lsp.buf.code_action, opts)
           end,
         })
+
         local servers = { 'ruff', 'vtsls', 'eslint' }
         for _, server in ipairs(servers) do
           vim.lsp.config(server, { capabilities = capabilities })
@@ -123,24 +129,24 @@ require("lazy").setup({
         vim.lsp.enable('pyright')
       end
     },
+    {
+      "stevearc/conform.nvim",
+      event = { "BufWritePre" },
+      cmd = { "ConformInfo" },
+      opts = {
+        formatters_by_ft = {
+          javascript = { "prettierd" },
+          typescript = { "prettierd" },
+          javascriptreact = { "prettierd" },
+          typescriptreact = { "prettierd" },
+          python = { "ruff_format" },
+          lua = { "stylua" },
+        },
+        format_on_save = { timeout_ms = 500, lsp_fallback = true },
+      },
+    },
   },
   install = { colorscheme = { "catppuccin" } },
 })
 
 vim.cmd.colorscheme "catppuccin"
-
-vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = "*.py",
-  callback = function()
-    -- vim.lsp.buf.code_action({ context = { only = { "source.fixAll.ruff" } }, apply = true })
-    vim.lsp.buf.format({ async = false })
-  end,
-})
-
-vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = { "*.js", "*.jsx", "*.ts", "*.tsx" },
-  callback = function()
-    -- vim.lsp.buf.code_action({ context = { only = { "source.fixAll.eslint" } }, apply = true })
-    vim.lsp.buf.format({ async = false })
-  end,
-})
