@@ -22,10 +22,7 @@ opt.termguicolors = true
 opt.scrolloff = 8
 
 local map = vim.keymap.set
-map("n", "<leader>p", "<cmd>Telescope find_files<cr>")
-map("n", "<leader>fg", "<cmd>Telescope live_grep<cr>")
 map("n", "<leader>h", "<cmd>nohlsearch<cr>", { silent = true })
-
 map("n", "[d", vim.diagnostic.goto_prev)
 map("n", "]d", vim.diagnostic.goto_next)
 map("n", "<leader>e", vim.diagnostic.open_float)
@@ -43,7 +40,15 @@ require("lazy").setup({
     {
       'nvim-telescope/telescope.nvim', 
       dependencies = { 'nvim-lua/plenary.nvim' },
-      config = function() require('telescope').setup({}) end
+      config = function()
+        require('telescope').setup({})
+
+        local builtin = require("telescope.builtin")
+        map('n', '<leader>p', builtin.find_files, { desc = 'Telescope find files' })
+        map('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
+        map('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
+        map('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+      end
     },
     {
       "nvim-treesitter/nvim-treesitter",
