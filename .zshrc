@@ -7,7 +7,6 @@ PROMPT="%F{green}%*%f %F{yellow}%~%f\$(git_branch)
 $ "
 
 alias python=python3
-alias vim=nvim
  
  export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
